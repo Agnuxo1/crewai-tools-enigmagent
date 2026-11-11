@@ -31,6 +31,10 @@ That's the install. The Python package talks to the local EnigmAgent REST server
 
 ---
 
+<!-- impact-note:start -->
+<sub><strong>Efficiency and practical value.</strong> A CrewAI-compatible tool provides a reusable connection to the local EnigmAgent vault, avoiding repeated custom credential-client implementations across crews. Placeholder-based task definitions can keep configuration easier to reuse, provided trusted code handles the resolved values. The benefit is integration consistency and controlled credential access within the documented <a href="#security-model">security model</a>, rather than a measured runtime gain.</sub>
+<!-- impact-note:end -->
+
 ## The problem (in CrewAI terms)
 
 When you give a CrewAI agent a credential, you have three options and all three leak:
